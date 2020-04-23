@@ -1,84 +1,93 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Houtarchat网址导航</title>
-<meta name="keywords" content="Houtarchat网址导航,网址导航,上网导航,网址,搜索,电影,手机电影下载,音乐,娱乐,图片,社区,BLOG,黄页，企业名录,114查询,网上黄页,win8,metro" />
-<meta name="description" content="Houtarchat网址导航,上网导航,网址之家,网址大全,网址,搜索,音乐,,搜索,电影,手机电影下载,娱乐,图片,小游戏,短信,社区,日记,相册,K歌,通讯簿,BLOG,win8,metro,天气预报,实用工具.最方便,最快捷,最多华人使用的上网导航" />
-<link rel="stylesheet" href="css/metro.css">
-<script type="text/javascript" src="script/jquery-1.4.4.min.js"></script>
-<!--解决在ie6下png透明-->
-<!--[if IE 6]>
-	<script type="text/javascript" src="script/DD_belatedPNG.js" ></script>	
-	<script type="text/javascript">
-	DD_belatedPNG.fix('ul,li,img');
-	</script>
-<![endif]-->
-<script type="text/javascript" src="script/jquery.carousel.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		var box_h=$("#metro_box").height();
-		var box_w=$("#metro_box").width();
-		$("#metro_box").css("margin-top",(($(window).height()-box_h)/2)-10+"px");
-		//var img_h=$(".arr_left img").height();
-		//var img_w=$(".arr_left img").width();
-		//$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
-		//$(".next").css("position","absolute").css("right","10px").css("top",($(window).height()-img_h)/2);
-		//链接在新窗口打开
-		$(".a_link dd a").attr("target","_blank");
-		$(".a_link ul li>a").hover(function(){
-			var a_href=$(this).attr("href");			
-			$(this).siblings().find("a").attr("href",a_href);
-		});
-		
-		//切屏-----------------------------------------------------------------
-		$("#top dl dd a").click(function(){
-			var now_class=$(this).attr("class");	
-			$("#top dl dd a.a_index").attr("class","a_index");
-			$("#top dl dd a.a_mzdw").attr("class","a_mzdw");
-			$("#top dl dd a.a_spyy").attr("class","a_spyy");
-			$("#top dl dd a.a_xwzx").attr("class","a_xwzx");
-			$("#top dl dd a.a_gwtb").attr("class","a_gwtb");
-			$("#top dl dd a.a_yxyl").attr("class","a_yxyl");
-			$("#top dl dd a.a_sygj").attr("class","a_sygj");
-			$("#top dl dd a.a_yszy").attr("class","a_yszy");
-			$(this).attr("class",now_class).addClass(now_class+"_h");			
-			var index=$(this).index();
-			$("#metro_box dd").hide();
-			$("#metro_box dd").eq(index).toggle(100);
-			if(index==1){
-				$("body").attr("class","bg0");	
-			}
-			switch (index){
-				case 0:
-					$("body").attr("class","");						
-					break;
-				case 1:
-					$("body").attr("class","bg0");					
-					break;
-				case 2:
-					$("body").attr("class","bg1");						
-					break;
-				case 3:
-					$("body").attr("class","bg2");					
-					break;
-				case 4:
-					$("body").attr("class","bg3");					
-					break;
-				case 5:
-					$("body").attr("class","bg4");						
-					break;	
-				case 6:
-					$("body").attr("class","bg5");						
-					break;	
-				default :
-					$("body").attr("class","bg6");						
-			}
-			
-			<!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
-		});
-	});
-</script>
+    <meta charset="UTF-8">
+    <title>Houtarchat网址导航</title>
+    <meta name="keywords" content="Houtarchat网址导航,网址导航,上网导航,网址,搜索,电影,手机电影下载,音乐,娱乐,图片,社区,BLOG,黄页，企业名录,114查询,网上黄页,win8,metro" />
+    <meta name="description" content="Houtarchat网址导航,上网导航,网址之家,网址大全,网址,搜索,音乐,,搜索,电影,手机电影下载,娱乐,图片,小游戏,短信,社区,日记,相册,K歌,通讯簿,BLOG,win8,metro,天气预报,实用工具.最方便,最快捷,最多华人使用的上网导航" />
+    <link rel="stylesheet" href="css/metro.css">
+    <script type="text/javascript" src="script/jquery-1.4.4.min.js"></script>
+    <!--解决在ie6下png透明-->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="script/DD_belatedPNG.js" ></script>
+        <script type="text/javascript">
+        DD_belatedPNG.fix('ul,li,img');
+        </script>
+    <![endif]-->
+    <script type="text/javascript" src="script/jquery.carousel.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var box_h = $("#metro_box").height();
+            var box_w = $("#metro_box").width();
+            $("#metro_box").css("margin-top", (($(window).height() - box_h) / 2) - 10 + "px");
+            //var img_h=$(".arr_left img").height();
+            //var img_w=$(".arr_left img").width();
+            //$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
+            //$(".next").css("position","absolute").css("right","10px").css("top",($(window).height()-img_h)/2);
+            //链接在新窗口打开
+            $(".a_link dd a").attr("target", "_blank");
+            $(".a_link ul li>a").hover(function () {
+                var a_href = $(this).attr("href");
+                $(this).siblings().find("a").attr("href", a_href);
+            });
+
+            //切屏-----------------------------------------------------------------
+            $("#top dl dd a").click(function () {
+                var now_class = $(this).attr("class");
+                $("#top dl dd a.a_index").attr("class", "a_index");
+                $("#top dl dd a.a_mzdw").attr("class", "a_mzdw");
+                $("#top dl dd a.a_spyy").attr("class", "a_spyy");
+                $("#top dl dd a.a_xwzx").attr("class", "a_xwzx");
+                $("#top dl dd a.a_gwtb").attr("class", "a_gwtb");
+                $("#top dl dd a.a_yxyl").attr("class", "a_yxyl");
+                $("#top dl dd a.a_sygj").attr("class", "a_sygj");
+                $("#top dl dd a.a_yszy").attr("class", "a_yszy");
+                $(this).attr("class", now_class).addClass(now_class + "_h");
+                var index = $(this).index();
+                $("#metro_box dd").hide();
+                $("#metro_box dd").eq(index).toggle(100);
+                if (index == 1) {
+                    $("body").attr("class", "bg0");
+                }
+                switch (index) {
+                    case 0:
+                        $("body").attr("class", "");
+                        break;
+                    case 1:
+                        $("body").attr("class", "bg0");
+                        break;
+                    case 2:
+                        $("body").attr("class", "bg1");
+                        break;
+                    case 3:
+                        $("body").attr("class", "bg2");
+                        break;
+                    case 4:
+                        $("body").attr("class", "bg3");
+                        break;
+                    case 5:
+                        $("body").attr("class", "bg4");
+                        break;
+                    case 6:
+                        $("body").attr("class", "bg5");
+                        break;
+                    default:
+                        $("body").attr("class", "bg6");
+                }
+
+                < !--[if IE 6]> $("#metro_box dd").eq(index).show(300);< ![endif]-- >
+            });
+        });
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?233b943eb4848fcd4e05595dc6146e07";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 <!--头部导航开始-->
